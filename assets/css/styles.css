@@ -383,6 +383,11 @@ button {
   transform: rotate(180deg);
 }
 
+/* Active Link */
+.active-link {
+  color: var(--first-color);
+}
+
 /* Show Menu */
 .show-menu {
   right: 0;
