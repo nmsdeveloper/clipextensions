@@ -65,9 +65,9 @@
 }
 
 /* Responsives Typography */
-@media screen and (max-width: 968px) {
+@media screen and (min-width: 968px) {
   :root {
-    --biggest-font-size: 2.5rem;
+    --biggest-font-size: 3.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -1068,7 +1068,7 @@ button {
   }
 
   .products-type {
-    font-size: var(--h1-font-size);
+    font-size: var(--h2-font-size);
   }
   .products-title,
   .products-description {
@@ -1092,11 +1092,8 @@ button {
 
 /* For Large Devices */
 @media screen and (min-width: 992px) {
-  .section-title {
-    font-size: var(--h1-font-size);
-  }
   .section-subtitle {
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
   }
 
   .home-container {
