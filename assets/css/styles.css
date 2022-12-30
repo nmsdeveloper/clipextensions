@@ -799,6 +799,7 @@ button {
 /*==================== Conatct ====================*/
 .contact-container {
   row-gap: 3.5rem;
+  padding-bottom: 5rem;
 }
 .contact-title,
 .contact-subtitle {
@@ -812,11 +813,14 @@ button {
 }
 
 .contact-data {
-  row-gap: 2rem;
+  min-height: 200px;
+  height: max-content;
+  row-gap: 1rem;
+  align-self: flex-end;
   background-color: var(--container-color);
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem;
   border-radius: 0.25rem;
-  box-shadow: var(--shadow-color-medium);
+  box-shadow: var(--shadow-color-small);
 }
 .contact-data-title {
   font-size: var(--normal-font-size);
@@ -879,13 +883,15 @@ button {
   right: 1rem;
   bottom: -20%;
   padding: 0.25rem;
-  color: var(--first-color);
   background-color: var(--container-color);
   box-shadow: var(--shadow-color-small);
   border-radius: 0.25rem;
   opacity: 0.8;
   z-index: var(--z-tooltip);
   transition: 0.3s ease-in-out;
+}
+.scroll-up i {
+  color: var(--first-color);
 }
 .scroll-up:hover {
   opacity: 1;
@@ -1056,6 +1062,9 @@ button {
     column-gap: 2rem;
   }
 
+  .products-type {
+    font-size: var(--h1-font-size);
+  }
   .products-title,
   .products-description {
     font-size: var(--normal-font-size);
@@ -1069,9 +1078,22 @@ button {
   .inspirations-description {
     font-size: var(--h3-font-size);
   }
+
+  .contact-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
 }
 
+/* For Large Devices */
 @media screen and (min-width: 992px) {
+  .section-title {
+    font-size: var(--h1-font-size);
+  }
+  .section-subtitle {
+    font-size: var(--h2-font-size);
+  }
+
   .home-container {
     column-gap: 2rem;
   }
@@ -1123,7 +1145,6 @@ button {
   }
 }
 
-/* For Large Devices */
 @media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
@@ -1138,6 +1159,9 @@ button {
     right: 5rem;
   }
 
+  .footer {
+    padding-top: 3rem;
+  }
   .footer-group {
     margin-top: 3rem;
     flex-direction: row;
