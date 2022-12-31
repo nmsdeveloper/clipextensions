@@ -546,6 +546,9 @@ button {
 }
 
 /*==================== Collections ====================*/
+.collections {
+  padding-top: 3rem;
+}
 .collections-container {
   row-gap: 2rem;
 }
