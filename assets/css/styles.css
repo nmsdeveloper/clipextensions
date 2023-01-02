@@ -35,9 +35,9 @@
   --container-color: hsl(0, 0%, 99%);
   --body-color: #ecf0f3;
 
-  --shadow-color-small: 0 1px 4px hsla(15, 4%, 15%, 0.1);
-  --shadow-color-medium: 0 12px 24px hsla(15, 0%, 15%, 0.2);
-  --shadow-color-large: 0 12px 32px hsla(15, 0%, 20%, 0.25);
+  --shadow-color-small: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+  --shadow-color-medium: 0 12px 24px hsla(0, 0%, 15%, 0.2);
+  --shadow-color-large: 0 12px 32px hsla(0, 0%, 20%, 0.25);
 
   /* Font and Typography */
   --body-font: "Poppins";
@@ -79,18 +79,18 @@
 
 /* Dark Theme */
 body.dark-theme {
-  --first-color: hsl(15, 76%, 74%);
-  --button-color: hsl(15, 0%, 24%);
-  --button-color-alt: hsl(15, 0%, 28%);
-  --title-color: hsl(15, 0%, 95%);
-  --text-color: hsl(15, 0%, 75%);
-  --border-color: hsl(15, 0%, 20%);
-  --container-color: hsl(15, 0%, 12%);
-  --body-color: hsl(15, 0%, 16%);
+  --first-color: hsl(15, 61%, 88%);
+  --button-color: hsl(0, 0%, 24%);
+  --button-color-alt: hsl(0, 0%, 28%);
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 75%);
+  --border-color: hsl(0, 0%, 20%);
+  --container-color: hsl(0, 0%, 12%);
+  --body-color: hsl(0, 0%, 16%);
 
-  --shadow-color-small: 0 1px 4px hsla(15, 0%, 4%, 0.25);
-  --shadow-color-medium: 0 12px 24px hsla(15, 0%, 4%, 0.3);
-  --shadow-color-large: 0 12px 32px hsla(15, 0%, 4%, 0.4);
+  --shadow-color-small: 0 1px 4px hsla(0, 0%, 4%, 0.25);
+  --shadow-color-medium: 0 12px 24px hsla(0, 0%, 4%, 0.3);
+  --shadow-color-large: 0 12px 32px hsla(0, 0%, 4%, 0.4);
 }
 
 /*==================== Base CSS ====================*/
@@ -193,7 +193,8 @@ button {
   margin: 0 auto;
   background-color: var(--first-color);
 }
-.section-subtitle {
+.section-subtitle,
+.section-all {
   display: block;
   font-size: var(--normal-font-size);
   color: var(--text-color-light);
@@ -222,17 +223,18 @@ button {
 }
 
 .button-gray {
-  color: hsl(15, 0%, 15%);
-  background-color: hsl(15, 0%, 75%);
+  color: hsl(0, 0%, 15%);
+  background-color: hsl(0, 0%, 75%);
 }
 .button-gray:hover {
-  background-color: hsl(15, 0%, 63%);
+  background-color: hsl(0, 0%, 63%);
 }
 
 .button-small {
   padding: 1rem 1.5rem;
 }
 
+/* Swiper style */
 .swiper {
   margin-left: initial;
   margin-right: initial;
@@ -496,7 +498,6 @@ button {
   justify-self: flex-end;
   width: 258px;
   height: 430px;
-  padding-bottom: 2rem;
   transform: translateX(1.5rem);
   background-color: var(--first-color);
 }
@@ -591,13 +592,12 @@ button {
 }
 
 /*==================== Products ====================*/
+.products-content {
+  margin-bottom: 3rem;
+}
 .products-type {
   font-size: var(--h3-font-size);
   margin-bottom: 0.5rem;
-}
-.products-content {
-  grid-template-rows: repeat(3, max-content);
-  row-gap: 3rem;
 }
 .wicks-swiper,
 .extensions-swiper,
@@ -747,6 +747,7 @@ button {
   position: absolute;
   top: 2rem;
   right: 1.5rem;
+  border: 0.25px solid var(--first-color);
 }
 
 /*==================== Prices ====================*/
@@ -1004,7 +1005,7 @@ button {
 
   .cart {
     width: 420px;
-    box-shadow: -2px 0 4px hsla(15, 0%, 15%, 0.1);
+    box-shadow: var(--shadow-color-small);
   }
 
   .nav {
@@ -1125,7 +1126,7 @@ button {
   }
 
   .inspirations-content {
-    column-gap: 8rem;
+    column-gap: 4.5rem;
     padding-bottom: 2rem;
   }
 
@@ -1157,7 +1158,7 @@ button {
   }
 
   .inspirations-content {
-    column-gap: 13rem;
+    column-gap: 7.5rem;
   }
   .inspirations-img {
     top: 5rem;
@@ -1180,7 +1181,6 @@ button {
   }
 
   .scroll-up {
-    bottom: 3rem;
     padding: 0.5rem;
   }
 }
