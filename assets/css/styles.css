@@ -1281,6 +1281,9 @@ button {
   .prices-header-subtitle {
     font-size: var(--h2-font-size);
   }
+  .prices-header-title {
+    font-size: var(--h1-font-size);
+  }
 
   .faqs-container {
     padding: 3.5rem 2.5rem;
