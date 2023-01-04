@@ -595,7 +595,7 @@ button {
 
 /*==================== Products ====================*/
 .products-content {
-  margin-bottom: 3rem;
+  row-gap: 3rem;
 }
 .products-type {
   font-size: var(--h3-font-size);
