@@ -100,27 +100,41 @@
           </ul>
 
           <!-- Nav Close -->
-          <div id="nav-close" class="nav-close">
+          <div onclick="hiddenMenu('nav-menu', 'show-menu')" class="nav-close">
             <i class="ri-close-fill"></i>
           </div>
         </div>
 
         <div class="nav-btns">
           <!-- Theme -->
-          <i id="theme-button" class="ri-moon-fill change-theme"> </i>
+          <i
+            id="theme-button"
+            onclick="changeTheme('dark-theme', 'ri-sun-fill')"
+            class="ri-moon-fill change-theme"
+          >
+          </i>
 
           <!-- Nav Shop -->
-          <i id="cart-shop" class="ri-shopping-bag-2-fill nav-shop"></i>
+          <i
+            onclick="showMenu('cart', 'show-cart')"
+            class="ri-shopping-bag-2-fill nav-shop"
+          ></i>
 
           <!-- Nav Toggle -->
-          <i id="nav-toggle" class="ri-apps-2-fill nav-toggle"></i>
+          <i
+            onclick="showMenu('nav-menu', 'show-menu')"
+            class="ri-apps-2-fill nav-toggle"
+          ></i>
         </div>
       </nav>
     </header>
 
     <!--==================== Cart ====================-->
     <div id="cart" class="cart">
-      <i id="cart-close" class="ri-close-fill cart-close"></i>
+      <i
+        onclick="hiddenMenu('cart', 'show-cart')"
+        class="ri-close-fill cart-close"
+      ></i>
 
       <h2 class="cart-title-center belle">Mon panier</h2>
 
@@ -951,7 +965,170 @@
       </section>
 
       <!-- Prices -->
-      <section id="prices" class="prices section"></section>
+      <section id="prices" class="prices section">
+        <h2 class="section-title">Tarifs</h2>
+        <span class="section-subtitle belle">
+          Diff&eacute;rents prix en gros et en d&eacute;tail
+        </span>
+
+        <div class="prices-container container grid">
+          <article class="prices-card grid">
+            <div class="prices-pricing">
+              <div class="prics-pricing-number">
+                6<span class="prices-pricing-symbol">%</span>
+              </div>
+              <span class="prices-pricing-duration">23 jours</span>
+            </div>
+
+            <header class="prices-header">
+              <div class="prices-header-circle grid">
+                <img
+                  src="assets/images/collections/extension.png"
+                  alt=""
+                  class="prices-img"
+                />
+              </div>
+
+              <span class="prices-header-subtitle belle">Tarifs</span>
+              <h1 class="prices-header-title">Extensions</h1>
+            </header>
+
+            <ul class="prices-list grid">
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>Lisse</span> 60000 Fcfa <br />
+                  45000 Fcfa/par extension (10+)
+                </p>
+              </li>
+
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>Ondul&eacute;</span> 45000 Fcfa <br />
+                  37000 Fcfa/par extension (10+)
+                </p>
+              </li>
+
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>Ponytail</span> 55000 Fcfa <br />
+                  48000 Fcfa/par extension (10+)
+                </p>
+              </li>
+
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>Frange</span> 35000 Fcfa <br />
+                  28000 Fcfa/par extension (10+)
+                </p>
+              </li>
+            </ul>
+
+            <a href="#products" class="button prices-button">
+              Voir les produits
+            </a>
+          </article>
+
+          <article class="prices-card grid">
+            <div class="prices-pricing">
+              <div class="prics-pricing-number">
+                6<span class="prices-pricing-symbol">%</span>
+              </div>
+              <span class="prices-pricing-duration">23 jours</span>
+            </div>
+
+            <header class="prices-header">
+              <div class="prices-header-circle grid">
+                <img
+                  src="assets/images/collections/wig.png"
+                  alt=""
+                  class="prices-img"
+                />
+              </div>
+
+              <span class="prices-header-subtitle belle">Tarifs</span>
+              <h1 class="prices-header-title">Perruque</h1>
+            </header>
+
+            <ul class="prices-list grid">
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>Lisse</span> 60000 Fcfa <br />
+                  45000 Fcfa/par extension (10+)
+                </p>
+              </li>
+
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>Boucl&eacute;</span> 50000 Fcfa <br />
+                  45000 Fcfa/par extension (10+)
+                </p>
+              </li>
+
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>Ponytail</span> 32000 Fcfa <br />
+                  28000 Fcfa/par extension (10+)
+                </p>
+              </li>
+            </ul>
+
+            <a href="#products" class="button prices-button"
+              >Voir les produits</a
+            >
+          </article>
+
+          <article class="prices-card grid">
+            <div class="prices-pricing">
+              <div class="prics-pricing-number">
+                6<span class="prices-pricing-symbol">%</span>
+              </div>
+              <span class="prices-pricing-duration">23 jours</span>
+            </div>
+
+            <header class="prices-header">
+              <div class="prices-header-circle grid">
+                <img
+                  src="assets/images/collections/wick.png"
+                  alt=""
+                  class="prices-img"
+                />
+              </div>
+
+              <span class="prices-header-subtitle belle">Tarifs</span>
+              <h1 class="prices-header-title">M&egrave;che</h1>
+            </header>
+
+            <ul class="prices-list grid">
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>2 tons</span> 3000 Fcfa <br />
+                  2300 Fcfa/par m&egrave;che (10+)
+                </p>
+              </li>
+
+              <li class="prices-list-item">
+                <i class="ri-check-fill prices-list-icon"></i>
+                <p class="prices-list-description">
+                  <span>3 tons</span> 3500 Fcfa <br />
+                  2800 Fcfa/par m&egrave;che (10+)
+                </p>
+              </li>
+            </ul>
+
+            <a href="#products" class="button prices-button"
+              >Voir les produits</a
+            >
+          </article>
+        </div>
+      </section>
 
       <!-- Faq's -->
       <section id="faqs" class="faqs section">

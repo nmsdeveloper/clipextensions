@@ -1,21 +1,17 @@
-/*==================== Actions Menu ====================*/
-const navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close");
-
 /* Show Menu */
-if (navToggle)
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
-  });
+function showMenu(element, show) {
+  const menu = document.getElementById(element);
+  menu.classList.add(show);
+}
 /* Hidden Menu */
-if (navClose)
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
+function hiddenMenu(element, show) {
+  const menu = document.getElementById(element);
+  menu.classList.remove(show);
+}
 /* Remove Menu Mobile */
 const navLink = document.querySelectorAll(".nav-link");
 function linkAction() {
+  const navMenu = document.getElementById("nav-menu");
   navMenu.classList.remove("show-menu");
 }
 navLink.forEach((l) => l.addEventListener("click", linkAction));
@@ -82,14 +78,13 @@ if (selectedTheme) {
     iconTheme
   );
 }
-
-themeButton.addEventListener("click", () => {
+function changeTheme(darkTheme, iconTheme) {
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
 
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
-});
+}
 
 /*==================== Products Swiper ====================*/
 const pOptions = {
@@ -153,19 +148,3 @@ function scrollUp() {
   else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
-
-/*==================== Actions Cart ====================*/
-const myCart = document.getElementById("cart"),
-  cartChop = document.getElementById("cart-shop"),
-  cartClose = document.getElementById("cart-close");
-
-/* Show Menu */
-if (cartChop)
-  cartChop.addEventListener("click", () => {
-    myCart.classList.add("show-cart");
-  });
-/* Hidden Menu */
-if (cartClose)
-  cartClose.addEventListener("click", () => {
-    myCart.classList.remove("show-cart");
-  });
